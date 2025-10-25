@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devaaa Space — DevendarCJ_DevOps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted:#9aa7bf;
+      --accent:#06b6d4; /* teal */
+      --glass: rgba(255,255,255,0.04);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg) 0%, #071024 100%);color:#e6eef8}
+    .container{max-width:980px;margin:48px auto;padding:28px}
+
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{width:84px;height:84px;border-radius:18px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:26px;color:white;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .title h1{margin:0;font-size:24px;letter-spacing:-0.2px}
+    .title p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    /* Capsule row */
+    .capsules{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    .capsule{background:var(--card);padding:12px 18px;border-radius:999px;display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,0.03);min-width:170px;cursor:pointer;transition:transform .12s ease, box-shadow .12s ease}
+    .capsule:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .capsule svg{width:20px;height:20px;flex-shrink:0}
+    .capsule .text{display:flex;flex-direction:column}
+    .capsule .label{font-weight:600}
+    .capsule .sub{font-size:12px;color:var(--muted)}
+
+    /* Projects */
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:28px}
+    .project{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);min-height:130px;display:flex;flex-direction:column;justify-content:space-between}
+    .project h3{margin:0;font-size:16px}
+    .project p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    .tags{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:var(--glass);color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+
+    footer{margin-top:32px;color:var(--muted);font-size:13px}
+
+    /* utilities */
+    .actions{margin-left:auto;display:flex;gap:10px}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;color:var(--muted);cursor:pointer}
+
+    /* Responsive */
+    @media (max-width:640px){.container{margin:18px 16px;padding:18px}.avatar{width:64px;height:64px}}
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <div class="title">
+        <h1>Devendar Charka Jithender — DevOps / SRE</h1>
+        <p>Cloud · CI/CD · Containers · Observability · Automation</p>
+      </div>
+    </header>
+
+    <!-- capsules -->
+    <section class="capsules" aria-label="Quick links">
+      <a class="capsule" href="mailto:devaaa.it@gmail.com" title="Send me an email">
+        <!-- mail icon -->
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden><path d="M3 6.5h18v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21 6.5L12 13 3 6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <div class="text"><span class="label">Gmail</span><span class="sub"></span></div>
+      </a>
+
+      <a class="capsule" href="https://drive.google.com/file/d/1O-nFfIKiDcexVmJtdDn7RzGW-gILqxme/view?usp=drive_link" target="_blank" rel="noopener noreferrer" title="View / download resume">
+        <!-- document icon -->
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14 2v6h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <div class="text"><span class="label">Resume</span><span class="sub"></span></div>
+      </a>
+
+      <a class="capsule" href="https://www.linkedin.com/in/devendar-cj/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+        <!-- linkedin icon -->
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden><rect x="2" y="2" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.2"></rect><path d="M7 11v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path><path d="M7 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path><path d="M11 11v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path><path d="M11 8.5c0-.8 0-1.5 1.2-1.5s1.2.7 1.2 1.5v.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg>
+        <div class="text"><span class="label">LinkedIn</span><span class="sub"></span></div>
+      </a>
+
+      <a class="capsule" href="https://github.com/DevendarCJ" target="_blank" rel="noopener noreferrer" title="GitHub">
+        <!-- github icon -->
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 2C7 2 3.5 5.5 3.5 10.2c0 3.3 2.2 6 5.3 6.9.4.1.6-.2.6-.5v-1.9c-2.1.4-2.6-1-2.6-1-.4-1-1-1.3-1-1.3-.8-.6 0-.6 0-.6.9.1 1.4.9 1.4.9.8 1.4 2.1 1 2.6.8.1-.6.3-1 .6-1.2-1.7-.2-3.5-.9-3.5-4 0-.9.3-1.6.8-2.2-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8a7.4 7.4 0 0 1 4 0c1.5-1 2.2-.8 2.2-.8.5 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.2 0 3.1-1.8 3.8-3.5 4 .3.3.6.9.6 1.9v2.8c0 .3.2.6.6.5 3.1-.9 5.3-3.6 5.3-6.9C20.5 5.5 17 2 12 2z" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <div class="text"><span class="label">GitHub</span><span class="sub"></span></div>
+      </a>
+    </section>
+
+    <!-- projects -->
+    <section id="projects" aria-label="Projects" style="margin-top:28px">
+      <h2 style="margin:0 0 10px 0;font-size:18px">Featured Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <div>
+            <h3>Automated CI/CD for Microservices</h3>
+            <p>Pipeline built with GitHub Actions, Docker, and Terraform that builds, tests, and deploys to EKS with blue/green strategy.</p>
+          </div>
+          <div>
+            <div class="tags">
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Jenkins</span>
+              <span class="tag">AWS-EC2</span>
+              <span class="tag">Docker</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div>
+            <h3>Infrastructure as Code (Multi-account)</h3>
+            <p>Modular Terraform modules, Terragrunt for account orchestration and security baseline automation.</p>
+          </div>
+          <div class="tags"><span class="tag">Terraform</span><span class="tag">Terragrunt</span><span class="tag">AWS</span></div>
+        </article>
+
+        <article class="project">
+          <div>
+            <h3>Observability Platform</h3>
+            <p>Centralized logging and metrics using Prometheus, Grafana and Loki with alerting via PagerDuty.</p>
+          </div>
+          <div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Loki</span></div>
+        </article>
+
+        <article class="project">
+          <div>
+            <h3>Cost Optimization Playbook</h3>
+            <p>Automated scripts and reports that identify idle resources and right-size fleets, saving 25% in monthly spend.</p>
+          </div>
+          <div class="tags"><span class="tag">Cost Ops</span><span class="tag">Automation</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:26px">
+      <h2 style="font-size:18px;margin:0 0 10px 0">Contact & Quick Info</h2>
+      <p style="color:var(--muted);margin:0 0 12px 0">Looking for DevOps, SRE or Cloud Engineer roles. Available for remote and onsite. Replace the placeholders below with your real links.</p>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="capsule" href="mailto:your.email@example.com">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden><path d="M3 6.5h18v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21 6.5L12 13 3 6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <div class="text"><span class="label">Gmail</span><span class="sub">your.email@example.com</span></div>
+        </a>
+
+        <a class="capsule" href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a class="capsule" href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a class="capsule" href="/resume.pdf" target="_blank">Resume</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>Tip: replace <code>your.email@example.com</code>, <code>/resume.pdf</code>, <code>yourprofile</code>, and <code>yourusername</code> with your real links. This single-file HTML is ready to be hosted on GitHub Pages or any static host.</p>
+    </footer>
+  </main>
+</body>
+</html>
